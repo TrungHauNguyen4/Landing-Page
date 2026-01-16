@@ -187,8 +187,16 @@ body {
 
 .hero-subtitle {
     font-size: var(--font-size-lg);
-    margin-bottom: var(--spacing-md);
+    margin-bottom: var(--spacing-sm);
     opacity: 0.95;
+    line-height: 1.8;
+    font-weight: 600;
+}
+
+.hero-description {
+    font-size: var(--font-size-base);
+    margin-bottom: var(--spacing-md);
+    opacity: 0.9;
     line-height: 1.8;
 }
 
@@ -361,8 +369,8 @@ body {
     }
 }
 
-/* Large Tablets (992px and below) */
-@media (max-width: 992px) and (min-width: 769px) {
+/* Medium Tablets (769px to 991px) */
+@media (min-width: 769px) and (max-width: 991px) {
     /* Features Grid - 2 columns */
     .features-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -372,6 +380,20 @@ body {
         grid-column: 1 / -1;
         max-width: 50%;
         margin: 0 auto;
+    }
+}
+
+/* Large Tablets and Desktop (992px and above) */
+@media (min-width: 992px) {
+    /* Features Grid - 3 columns */
+    .features-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .feature-card:nth-child(3) {
+        grid-column: auto;
+        max-width: 100%;
+        margin: 0;
     }
 }
 
